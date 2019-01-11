@@ -12,5 +12,8 @@
   "private": true,
   "dependencies": {
     "exstatic": "https://github.com/hexrweb/exstatic.git"
+  },
+  "devDependencies": {
+    "fs-extra": "^7.0.1"
   }
 }

@@ -1,9 +1,5 @@
-const {promisify} = require('util');
-const {rename, rmdir} = require('fs');
+const {copy, move, remove} = require('fs-extra');
 const Exstatic = require('exstatic');
-
-const move = promisify(rename);
-const del = promisify(rmdir);
 
 const dirs = {
     inputDir: './src/pages',
@@ -12,16 +8,28 @@ const dirs = {
     partialsDir: './src/partials'
 };
 const exstatic = Exstatic(dirs);
+const STATIC_FILES = ['favicon.ico', 'googlec1e95eb427bc82c1.html', 'pubkey.asc', 'robots.txt', 'sitemap.xml'];
 
-async function run() {
+function copyFiles() {
+    // Exstatic doesn't currently have support for 1:1 copying
+    let promises = [copy('./src/assets', './built/assets')];
+    STATIC_FILES.forEach(file => promises.push(copy(`./src/${file}`, `./built/${file}`)));
+    return Promise.all(promises);
+}
+
+async function compile() {
     await exstatic.initialize();
     await exstatic.loadFiles();
     await exstatic.write();
     // Exstatic is having issues handling explicit paths
-    await move('./built/error/index.html', './built/error.html');
-    await move('./built/error_403/index.html', './built/error_403.html');
-    await del('./built/error');
-    await del('./built/error_403');
+    await move('./built/error/index.html', './built/error.html', {overwrite: true});
+    await move('./built/error_403/index.html', './built/error_403.html', {overwrite: true});
+    await remove('./built/error');
+    await remove('./built/error_403');
+}
+
+async function run() {
+    await Promise.all([compile(), copyFiles()]);
     exstatic.onBeforeExit(true);
 }
 

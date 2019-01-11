@@ -15,6 +15,7 @@
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
         <script src="/assets/js/combined.min.js"></script>
         <noscript><style>main, footer {display: none}#noscript {display: inherit}</style></noscript>
+        {{{block "head"}}}
     </head>
     <body class="cyan darken-2">
         <header>
@@ -24,6 +25,7 @@
                         <a href="/" class="brand-logo font-anders hide-on-med-and-down active">HexR</a>
                         <a href="/" class="brand-logo font-anders center hide-on-large-only active">HexR</a>
                         <a href="#" data-activates="mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                        <!-- @todo: Active page -->
                         <ul class="right hide-on-med-and-down">
                             <li><a class="flow-text" href="/about">About</a></li>
                             <li><a class="flow-text" href="/initiative">Initiative</a></li>
@@ -58,7 +60,7 @@
                 <h2><a href="http://enable-javascript.com/" target="_blank">Enable JavaScript</a> to find out what HexR is about!</h2>
             </div>
         </div>
-        <main>
+        <main class="white-text grey darken-4">
             {{{body}}}
         </main>
         <footer class="page-footer hexr-background">

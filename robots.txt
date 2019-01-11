@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /error
+Disallow: /error_403
+Disallow: /error.html
+Disallow: /error_403.html
+Disallow: /request/post.php
+
+Sitemap: https://hexr.org/sitemap.xml

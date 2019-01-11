@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Fixed Footer Source</title>
+	</head>
+	<body>
+		<pre>
+&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;style&gt;
+		.fixed
+		{
+			height:25vh;
+		}
+		.fixed-footer
+		{
+			position:fixed;
+			width:100vw;
+			height:25vh;
+			bottom:0;
+			left:0;
+			right:0;
+			z-index:-1;
+			margin-top:-25vh;
+			background:blue;
+		}
+		.content
+		{
+			min-height:150vh;
+			background:red;
+		}
+		body
+		{
+			margin:0;
+		}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;div class=&quot;content&quot;&gt;Hello&lt;/div&gt;
+		&lt;div class=&quot;fixed-footer&quot;&gt;Hello&lt;/div&gt;
+		&lt;div class=&quot;fixed&quot;&gt;Hello&lt;/div&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+		</pre>
+<!--<a href="/ff_src">Source</a>!-->
+	</body>
+</html>

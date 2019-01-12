@@ -8,7 +8,7 @@ const dirs = {
     partialsDir: './src/partials'
 };
 const exstatic = Exstatic(dirs);
-const STATIC_FILES = ['favicon.ico', 'googlec1e95eb427bc82c1.html', 'pubkey.asc', 'robots.txt', 'sitemap.xml'];
+const STATIC_FILES = ['favicon.ico', 'googlec1e95eb427bc82c1.html', 'robots.txt', 'sitemap.xml', '_redirects'];
 
 function copyFiles() {
     // Exstatic doesn't currently have support for 1:1 copying

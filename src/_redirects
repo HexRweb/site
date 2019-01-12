@@ -3,3 +3,5 @@
 /plans /pricing
 /request /pricing#request
 /project/* /projects/:splat
+/projects/imagehosting /projects/image-hosting
+/projects/planview/download /projects/planview

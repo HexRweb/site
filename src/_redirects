@@ -1,4 +1,5 @@
 /pubkey.asc https://assets.hexr.org/pubkey.asc 200
 /security.txt https://assets.hexr.org/.well-known/security.txt
-/request /plans#request
+/plans /pricing
+/request /pricing#request
 /project/* /projects/:splat

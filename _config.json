@@ -1,3 +1,6 @@
 {
-    "recaptcha_key": "6LfvI4kUAAAAAIxSk9gvDtqtnB-eytl1PZmM6CEf"
+    "recaptcha_key": "6LfvI4kUAAAAAIxSk9gvDtqtnB-eytl1PZmM6CEf",
+    "plugins": [
+        "../plugins/minify-html"
+    ]
 }

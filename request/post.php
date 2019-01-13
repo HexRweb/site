@@ -1,6 +1,25 @@
 <?php
+
 // This function returns JSON responses
 header('Content-Type: application/json');
+
+// Only allow requests from the www domain
+header('Access-Control-Allow-Origin: https://www.hexr.org');
+header('Access-Control-Allow-Headers: Content-Type');
+
+// OPTIONS requests are used for preflight; there will be no body
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+	http_response_code(204);
+	die();
+}
+
+// Because this is a JSON API, we need to parse the input as JSON
+$_POST = json_decode(file_get_contents('php://input'), true);
+
+if (!$_POST || json_last_error()) {
+	http_response_code(400);
+	die('{"errors": ["Unable to process input data"]}');
+}
 
 if(!isset($_POST['submitted'])) {
 	die('{"errors":["No submission detected"]}');

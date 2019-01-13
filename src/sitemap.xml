@@ -5,87 +5,59 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://hexr.org/</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>1.00</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/about</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/about/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/initiative</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/initiative/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/projects/</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/projects/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/pricing</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/projects/planview/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/faq</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/pricing/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/clients</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/faq/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/sponsors</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/sponsors/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/contact</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/contact/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/the-book/</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/the-book/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/request/</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/request/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/policies</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.80</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/policies/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/the-book/jan-2016-introduction</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.64</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/the-book/jan-2016-introduction/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
   <url>
-    <loc>https://hexr.org/the-book/feb-2016-computer-components</loc>
-    <lastmod>2016-09-03</lastmod>
-    <priority>0.64</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.hexr.org/the-book/feb-2016-computer-components/</loc>
+    <lastmod>2019-01-13</lastmod>
   </url>
 </urlset>

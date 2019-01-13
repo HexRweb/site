@@ -59,7 +59,6 @@ function getCleanData() : Array {
 		'requirements' => $_POST['org-web-requirements'],
 		'employees' => $_POST['num-employees'],
 		'income' => $_POST['income'],
-		'forProfit' => $_POST['profit']
 	);
 
 	$filterSettings = array(
@@ -73,7 +72,6 @@ function getCleanData() : Array {
 		'requirements' => FILTER_SANITIZE_STRING,
 		'employees' => FILTER_SANITIZE_NUMBER_INT,
 		'income' => FILTER_SANITIZE_NUMBER_FLOAT,
-		'forProfit' => FILTER_SANITIZE_STRING
 	);
 
 	stripNewLines($vars, 'firstName');
@@ -94,8 +92,8 @@ function getCleanData() : Array {
 	$vars['website'] = $_POST['website'] ?? '';
 	clean($vars, 'website', FILTER_SANITIZE_ENCODED);
 
+	$vars['forProfit'] = (Boolean) $_POST['profit'] ? 'For Profit' : 'Not for profit';
 	$vars['ip'] = $_SERVER['REMOTE_ADDR'];
-	$vars['forProfit'] = $vars['forProfit'] === 'on' ? 'For Profit' : 'Not for profit';
 
 	return $vars;
 }

@@ -6,7 +6,7 @@ if(!isset($_POST['submitted'])) {
 	die('{"errors":["No submission detected"]}');
 }
 
-$config = require('./config.php');
+$config = require('config.php');
 /* Begin Function definitions */
 
 /*

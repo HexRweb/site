@@ -61,7 +61,8 @@ title: HexR Pricing
         <div class="modal-content row black-text">
             <h4>Request a website!</h4>
             <p class="red-text">* denotes required field.</p>
-            <form action="/request/post.php" method="post" class="col s12">
+            <div class="error-list red-text"></div>
+            <form id="request-site" class="col s12">
                 <div class="row">
                     <div class="input-field col m6"><i class="material-icons prefix">contacts</i>
                         <input id="first_name" name="first_name" type="text" class="validate" required />
@@ -119,7 +120,7 @@ title: HexR Pricing
                         <div class="switch">
                             <label>
                                 For profit
-                                <input type="checkbox" id="profit" name="profit" class="validate" required>
+                                <input type="checkbox" id="profit" name="profit" class="validate">
                                 <span class="lever"></span>
                                 Non profit
                             </label>
@@ -139,3 +140,7 @@ title: HexR Pricing
         </div>
     </div>
 </div>
+
+{{#contentFor "scripts"}}
+<script src="/assets/js/submit-request.js"></script>
+{{/contentFor}}

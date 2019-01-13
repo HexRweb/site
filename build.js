@@ -22,7 +22,7 @@ async function compile() {
     await exstatic.loadFiles();
     await exstatic.write();
     // Exstatic is having issues handling explicit paths
-    await move('./built/error/index.html', './built/error.html', {overwrite: true});
+    await move('./built/error/index.html', './built/404.html', {overwrite: true});
     await move('./built/error_403/index.html', './built/error_403.html', {overwrite: true});
     await remove('./built/error');
     await remove('./built/error_403');

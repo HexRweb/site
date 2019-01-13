@@ -142,7 +142,7 @@ function isCaptchaValid(String $response) : bool {
 			'method' => 'POST',
 			'content' => http_build_query(array(
 				// @note: this secret is not valid and will be removed!
-				'secret' => $config['recaptcha_key'],
+				'secret' => $config['captcha_key'],
 				'remoteip' => $_SERVER['REMOTE_ADDR'],
 				'response' => $response
 			)),

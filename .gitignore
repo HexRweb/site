@@ -1,0 +1,17 @@
+*.log
+*.out
+logs
+
+npm-debug.log
+node_modules
+
+.env.json
+.vscode/
+*.code-workspace
+
+exstatic
+.exstatic
+
+built/
+
+*.zip

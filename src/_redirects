@@ -1,0 +1,7 @@
+/pubkey.asc https://assets.hexr.org/pubkey.asc 200
+/security.txt https://assets.hexr.org/.well-known/security.txt
+/plans /pricing
+/request /pricing#request
+/project/* /projects/:splat
+/projects/imagehosting /projects/image-hosting
+/projects/planview/download /projects/planview

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:xhtml="http://www.w3.org/1999/xhtml"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://www.hexr.org/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/about/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/initiative/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/projects/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/projects/planview/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/pricing/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/faq/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/sponsors/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/contact/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/the-book/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/request/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/policies/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/the-book/jan-2016-introduction/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hexr.org/the-book/feb-2016-computer-components/</loc>
+    <lastmod>2019-01-13</lastmod>
+  </url>
+</urlset>

@@ -100,7 +100,10 @@ path: /index.html
 </div>
 <div class="section center white-text valign" id="contact">
 	<div class="valign">
-		<p class="flow-text">So what are you waiting for?</p><a class="modal-trigger btn flow-text waves-effect waves-light hexr-background" href="#request">GET YOUR WEBSITE NOW!</a>
+		<p class="flow-text">So what are you waiting for?</p>
+			<a class="modal-trigger btn flow-text waves-effect waves-light hexr-background" href="#request">
+				GET YOUR WEBSITE NOW!
+			</a>
 		<br/>
 		<br/>
 	</div>
@@ -187,8 +190,8 @@ path: /index.html
 {{#contentFor "scripts"}}
 <link rel="stylesheet" href="/assets/css/animations.home.css" />
 <script>
-	$(".parallax").parallax();
-	var o = [{
+	//$(".parallax").parallax();
+/*var o = [{
 		selector: '#benefit-1',
 		offset: 200,
 		callback: '$("#benefit-1").children().addClass("animated slideInRight").removeClass("hide");'
@@ -217,8 +220,8 @@ path: /index.html
 		offset: 100,
 		callback: '$("#contact").children().addClass("animated rotateIn").delay(1000).removeClass("rotateIn").addClass("flash")'
 	}, ];
-	if ($(window).width() >= 922) Materialize.scrollFire(o);
-	else $('.section .row').removeClass('hide').addClass('center');
+	if ($(window).width() >= 922) M.ScrollSpy(o);
+	else*/ document.querySelectorAll('.section .row').forEach(el => el.classList.remove('hide'));// .addClass('center');
 </script>
 <script src="/assets/js/submit-request.js"></script>
 {{/contentFor}}

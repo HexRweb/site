@@ -7,14 +7,15 @@ path: /index.html
 <style>
 	#index-banner {
 		z-index: 5;
-	}
-
-	#home-parallax {
-		z-index: -1;
+		background-image: url('/assets/img/hero.jpeg');
+		background-size: cover;
+		background-attachment: fixed;
+		background-position-y: 50%;
+		height: 150%;
 	}
 </style>
 {{/contentFor}}
-<div id="index-banner" class="parallax-container transparent">
+<div id="index-banner" class="transparent">
 	<div class="section no-pad-bot">
 		<div class="container">
 			<h1 class="header col s12 center blue-grey-text text-darken-3">HexR</h1>
@@ -29,9 +30,6 @@ path: /index.html
 			</div>
 			<br>
 			<br>
-		</div>
-		<div class="parallax" id="home-parallax">
-			<img src="/assets/img/hero.jpeg" alt="Hot air balloons to symbolize the new level" />
 		</div>
 	</div>
 </div>

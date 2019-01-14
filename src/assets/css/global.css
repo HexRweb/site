@@ -190,10 +190,6 @@ nav.hexr-background {
 	color: white !important;
 }
 
-.parallax-container .parallax img {
-	top: -70% !important;
-}
-
 .hexr-center {
 	display: flex;
 	flex-direction: column;

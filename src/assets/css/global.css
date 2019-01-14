@@ -159,9 +159,8 @@ a.active {
 	line-height: 72px;
 }
 
-a.button-collapse {
-	font-size: 72px;
-	line-height: 72px;
+nav .sidenav-trigger i {
+	font-size: 2.5em;
 }
 
 .footer-nav-link {

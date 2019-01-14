@@ -1,1 +1,5 @@
-$(document).ready(function(){$(".button-collapse").sideNav();$(".parallax").parallax();$('.modal-trigger').leanModal();$("html").niceScroll({scrollspeed: 120,mousescrollstep: 80,cursorwidth:8,zindex:999999});$(window).trigger("scroll");});
+$(document).ready(function() {
+    $(".button-collapse").sideNav();
+    $(".parallax").parallax();
+    $('.modal-trigger').leanModal();
+});

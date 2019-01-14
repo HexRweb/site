@@ -1,5 +1,7 @@
 window.addEventListener('load', function() {
-	$('.button-collapse').sideNav();
-	$('.parallax').parallax();
-	$('.modal-trigger').leanModal();
+	window.hexr = {
+		sidenav: M.Sidenav.init(document.querySelectorAll('.side-nav')),
+		parallax: M.Parallax.init(document.querySelectorAll('.parallax')),
+		modals: M.Modal.init(document.querySelectorAll('.modal-trigger'))
+	}
 });

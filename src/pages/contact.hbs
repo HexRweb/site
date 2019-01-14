@@ -6,45 +6,45 @@ title: Contact HexR
 {{/contentFor}}
 
 <div class="container">
-    <h1 class="center">Contact HexR</h1>
-    <p class="flow-text">
-        Have a question? Want to talk? Want a website? Not stated? Feel free to contact us.
-        <small>Currently, we are unable to use the script we normally use to make mail seamless. We apologize
-            for the inconvenience.</small>
-        Contact us by clicking <a href="mailto:contact@hexr.org" target="_blank">THIS LINK</a>
-    </p>
-    <p class="flow-text">
-        Please note we do not have live chat, phone, or mailing addresses since we currently have no sponsors for those services.
-    </p>
-    <div class="pgp-form">
-        <p class="flow-text">Sensitive matter? Feel free to use PGP!</p>
-        <textarea id="pgp-input" style="width: 100%; min-height: 300px"></textarea>
-        <br />
-        <button id="pgp-submit" onClick="encryptText()" class="btn">Encrypt</button>
-    </div>
-    <p class="flow-text">You can <a href="/pubkey.asc" target="_blank">download</a> the PGP key as well!</p>
+	<h1 class="center">Contact HexR</h1>
+	<p class="flow-text">
+		Have a question? Want to talk? Want a website? Not stated? Feel free to contact us.
+		<small>Currently, we are unable to use the script we normally use to make mail seamless. We apologize
+			for the inconvenience.</small>
+		Contact us by clicking <a href="mailto:contact@hexr.org" target="_blank">THIS LINK</a>
+	</p>
+	<p class="flow-text">
+		Please note we do not have live chat, phone, or mailing addresses since we currently have no sponsors for those services.
+	</p>
+	<div class="pgp-form">
+		<p class="flow-text">Sensitive matter? Feel free to use PGP!</p>
+		<textarea id="pgp-input" style="width: 100%; min-height: 300px"></textarea>
+		<br />
+		<button id="pgp-submit" onClick="encryptText()" class="btn">Encrypt</button>
+	</div>
+	<p class="flow-text">You can <a href="/pubkey.asc" target="_blank">download</a> the PGP key as well!</p>
 </div>
 
 {{#contentFor "scripts"}}
 <script>
 function encryptText() {
-    if (window.crypto.getRandomValues) {
-        if ($('#pgp-submit').html() === 'Encrypt') {
-            var pub_key = openpgp.key.readArmored($('#pubkey').text());
-            var pgp_message = openpgp.encryptMessage(pub_key.keys, $('#php-input').val());
-            $('#pgp-input').val(pgp_message);
-            $('#pgp-submit').html('Clear');
-            return true
-        } else {
-            $('#pgp-input').val('');
-            $('#pgp-submit').html('Encrypt')
-        }
-    } else {
-        $('#pgp-submit').prop('disabled', 1);
-        $('#pgp-submit').val('Unsupported browser');
-        Materialize.toast('This browser isn\'t supported!');
-        return false
-    }
+	if (window.crypto.getRandomValues) {
+		if ($('#pgp-submit').html() === 'Encrypt') {
+			var pub_key = openpgp.key.readArmored($('#pubkey').text());
+			var pgp_message = openpgp.encryptMessage(pub_key.keys, $('#php-input').val());
+			$('#pgp-input').val(pgp_message);
+			$('#pgp-submit').html('Clear');
+			return true
+		} else {
+			$('#pgp-input').val('');
+			$('#pgp-submit').html('Encrypt')
+		}
+	} else {
+		$('#pgp-submit').prop('disabled', 1);
+		$('#pgp-submit').val('Unsupported browser');
+		Materialize.toast('This browser isn\'t supported!');
+		return false
+	}
 }
 </script>
 {{/contentFor}}

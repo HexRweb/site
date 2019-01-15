@@ -196,13 +196,17 @@ nav.hexr-background {
 	align-items: center;
 	justify-content: center;
 }
+
+tr {
+	border-bottom: 1px solid rgba(255,255,255,0.5)
+}
 /* End Fixes for Materialize 1.0.0 */
 
 /* Styles for contact message box */
 #pgp-input {
 	color: white;
 	min-height: 300px;
-	padding: 5em;
+	padding: 2.5em;
 	width: 100%;
 }
 /* End styles for contact message box */

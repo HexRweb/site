@@ -5,17 +5,17 @@
   "main": "build.js",
   "scripts": {
     "build": "node ./build.js",
-    "watch": "chokidar src/**/* -c \"npm run build\""
+    "watch": "exstatic watch"
   },
   "repository": "git@github.com:hexrweb/site",
   "author": "HexR <hello@hexr.org>",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "exstatic": "https://github.com/hexrweb/exstatic.git"
+    "@exstatic/core": "https://github.com/hexrweb/exstatic.git"
   },
   "devDependencies": {
-    "chokidar-cli": "^1.2.1",
+    "@exstatic/cli": "https://github.com/hexrweb/exstatic-cli",
     "fs-extra": "^7.0.1"
   }
 }

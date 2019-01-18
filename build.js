@@ -1,14 +1,8 @@
 const {copy, move, remove} = require('fs-extra');
-const Exstatic = require('exstatic');
+const exstatic = require('@exstatic/dev');
 
-const dirs = {
-	inputDir: './src/pages',
-	outputDir: './built',
-	layoutsDir: './src/layouts',
-	partialsDir: './src/partials'
-};
-const exstatic = Exstatic(dirs);
 const STATIC_FILES = ['favicon.ico', 'robots.txt', 'sitemap.xml', '_redirects'];
+const instance = exstatic();
 
 function copyFiles() {
 	// Exstatic doesn't currently have support for 1:1 copying
@@ -18,9 +12,7 @@ function copyFiles() {
 }
 
 async function compile() {
-	await exstatic.initialize();
-	await exstatic.loadFiles();
-	await exstatic.write();
+	await instance.build();
 	// Exstatic is having issues handling explicit paths
 	await move('./built/error/index.html', './built/404.html', {overwrite: true});
 	await move('./built/error_403/index.html', './built/error_403.html', {overwrite: true});
@@ -30,7 +22,7 @@ async function compile() {
 
 async function run() {
 	await Promise.all([compile(), copyFiles()]);
-	exstatic.onBeforeExit(true);
+	instance.onBeforeExit(true);
 }
 
 run();

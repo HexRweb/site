@@ -4,7 +4,7 @@
 
 "@exstatic/cli@https://github.com/hexrweb/exstatic-cli":
   version "0.0.1"
-  resolved "https://github.com/hexrweb/exstatic-cli#0f90d3a2cecf4de68fa098f15a3bed19391f623b"
+  resolved "https://github.com/hexrweb/exstatic-cli#9735a773075ee767b9f66cbec32fe6e9a491b333"
   dependencies:
     "@exstatic/dev" "https://github.com/hexrweb/exstatic-dev.git"
     yargs "^12.0.5"
@@ -27,7 +27,7 @@
 
 "@exstatic/dev@https://github.com/hexrweb/exstatic-dev.git":
   version "0.0.1"
-  resolved "https://github.com/hexrweb/exstatic-dev.git#483fa0edc04da90baeb339f7e19f0d8c74af0a51"
+  resolved "https://github.com/hexrweb/exstatic-dev.git#41ceb3123fe151bd9db28ffd49f1b16dfdf5200a"
   dependencies:
     "@exstatic/core" "https://github.com/hexrweb/exstatic.git"
     chokidar "^2.0.4"

@@ -11,11 +11,8 @@
   "author": "HexR <hello@hexr.org>",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "@exstatic/core": "https://github.com/hexrweb/exstatic.git"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@exstatic/cli": "https://github.com/hexrweb/exstatic-cli",
     "fs-extra": "^7.0.1"
   }
 }

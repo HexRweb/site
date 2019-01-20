@@ -1,5 +1,5 @@
 const {copy, move, remove} = require('fs-extra');
-const exstatic = require('@exstatic/dev');
+const exstatic = require('./@exstatic/packages/dev');
 
 const STATIC_FILES = ['favicon.ico', 'robots.txt', 'sitemap.xml', '_redirects'];
 const instance = exstatic();

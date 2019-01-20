@@ -3,5 +3,8 @@
     "outputDir": "./built",
     "layoutsDir": "./src/layouts",
     "partialsDir": "./src/partials",
-    "recaptcha_key": "6LfvI4kUAAAAAIxSk9gvDtqtnB-eytl1PZmM6CEf"
+    "site": {
+      "url": "https://www.hexr.org",
+      "recaptcha_key": "6LfvI4kUAAAAAIxSk9gvDtqtnB-eytl1PZmM6CEf"
+    }
 }

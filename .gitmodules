@@ -1,0 +1,3 @@
+[submodule "@exstatic"]
+	path = @exstatic
+	url = https://github.com/hexrweb/exstatic

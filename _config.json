@@ -1,6 +1,10 @@
 {
-    "recaptcha_key": "6LfvI4kUAAAAAIxSk9gvDtqtnB-eytl1PZmM6CEf",
-    "plugins": [
-        "../plugins/minify-html"
-    ]
+    "inputDir": "./src/pages",
+    "outputDir": "./built",
+    "layoutsDir": "./src/layouts",
+    "partialsDir": "./src/partials",
+    "site": {
+      "url": "https://www.hexr.org",
+      "recaptcha_key": "6LfvI4kUAAAAAIxSk9gvDtqtnB-eytl1PZmM6CEf"
+    }
 }

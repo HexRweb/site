@@ -4,18 +4,16 @@
   "description": "HexR's site",
   "main": "build.js",
   "scripts": {
+    "postinstall": "yarn install --cwd @exstatic",
     "build": "node ./build.js",
-    "watch": "chokidar src/**/* -c \"npm run build\""
+    "watch": "exstatic watch"
   },
   "repository": "git@github.com:hexrweb/site",
   "author": "HexR <hello@hexr.org>",
   "license": "MIT",
   "private": true,
-  "dependencies": {
-    "exstatic": "https://github.com/hexrweb/exstatic.git"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "chokidar-cli": "^1.2.1",
     "fs-extra": "^7.0.1"
   }
 }

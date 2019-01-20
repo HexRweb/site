@@ -4,6 +4,7 @@
   "description": "HexR's site",
   "main": "build.js",
   "scripts": {
+    "postinstall": "yarn install --cwd @exstatic",
     "build": "node ./build.js",
     "watch": "exstatic watch"
   },

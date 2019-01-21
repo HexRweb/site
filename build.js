@@ -1,4 +1,4 @@
-const {copy, move, remove} = require('fs-extra');
+const {copy} = require('fs-extra');
 const exstatic = require('./@exstatic/packages/dev');
 
 const STATIC_FILES = ['favicon.ico', 'robots.txt', 'sitemap.xml', '_redirects'];
@@ -13,11 +13,6 @@ function copyFiles() {
 
 async function compile() {
 	await instance.build();
-	// Exstatic is having issues handling explicit paths
-	await move('./built/error/index.html', './built/404.html', {overwrite: true});
-	await move('./built/error_403/index.html', './built/error_403.html', {overwrite: true});
-	await remove('./built/error');
-	await remove('./built/error_403');
 }
 
 async function run() {

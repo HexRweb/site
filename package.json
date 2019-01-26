@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "yarn install --cwd @exstatic",
     "build": "node ./build.js",
-    "watch": "exstatic watch"
+    "watch": "node ./@exstatic/packages/cli/bin/exstatic watch"
   },
   "repository": "git@github.com:hexrweb/site",
   "author": "HexR <hello@hexr.org>",

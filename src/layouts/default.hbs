@@ -22,7 +22,13 @@
 		<link href="/assets/css/global.css" rel="stylesheet">
 		{{!-- <script src="/assets/js/combined.min.js"></script> --}}
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<noscript><style>main, footer {display: none}#noscript {display: inherit}</style></noscript>
+		<style>
+			.hexr-background{/*background-color:#1e5799*/background-color:#12374a !important}
+			.text-hexr-blue{/*color:#1e5799 !important;*/color:#12374a !important}
+			nav.hexr-background{padding:0 23px}
+			#noscript{height:calc(100vh - 64px);animation-delay:0.5s;animation-duration:3s;display:none;overflow:hidden}
+			#noscript-wrapper{width:100vw}
+		</style>
 		<noscript><style>main, footer {display:none}#noscript {display:flex}</style></noscript>
 		{{{block "head"}}}
 	</head>

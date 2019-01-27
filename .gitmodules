@@ -1,3 +1,6 @@
 [submodule "@exstatic"]
 	path = @exstatic
 	url = https://github.com/hexrweb/exstatic
+[submodule "src/materialize"]
+	path = src/materialize
+	url = https://github.com/dogfalo/materialize

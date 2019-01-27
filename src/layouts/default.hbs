@@ -11,12 +11,7 @@
 		<meta name="HandheldFriendly" content="true" />
 		<meta charset="UTF-8" />
 		{{#unless page.meta.noCanonical}}
-		{{#if page.meta.home}}
-		{{!-- @todo: abstract to helper--}}
-		<link rel="canonical" href="{{@site.url}}" />
-		{{else}}
-		<link rel="canonical" href="{{@site.url}}/{{page.path}}" />
-		{{/if}}
+		<link rel="canonical" href="{{url page.path}}" />
 		{{/unless}}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 		<link href="/assets/css/global.css" rel="stylesheet">

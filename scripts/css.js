@@ -19,7 +19,8 @@ async function prefix(contents = false) {
 		contents = await sass();
 	}
 
-	const prefixed = await autoprefixer.process(contents);
+	const prefixed = await autoprefixer.process(contents, {from: undefined});
+
 	return prefixed.css;
 }
 
@@ -28,7 +29,7 @@ async function uglify(contents = false) {
 		contents = await prefix();
 	}
 
-	const uglified = await cssnano.process(contents);
+	const uglified = await cssnano.process(contents, {from: undefined});
 	return uglified.css;
 }
 

@@ -20,14 +20,20 @@
 		{{/unless}}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 		<link href="/assets/css/global.css" rel="stylesheet">
-		{{!-- <script src="/assets/js/combined.min.js"></script> --}}
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<noscript><style>main, footer {display: none}#noscript {display: inherit}</style></noscript>
+		<style>
+			.hexr-background{/*background-color:#1e5799*/background-color:#12374a !important}
+			.text-hexr-blue{/*color:#1e5799 !important;*/color:#12374a !important}
+			nav.hexr-background{padding:0 23px}
+			#noscript{height:calc(100vh - 64px);animation-delay:0.5s;animation-duration:3s;display:none;overflow:hidden}
+			#noscript-wrapper{width:100vw}
+		</style>
+		<noscript><style>main, footer {display:none}#noscript {display:flex}</style></noscript>
 		{{{block "head"}}}
 	</head>
-	<body class="cyan darken-2">
+	<body class="grey darken-4 white-text">
 		<header>
-			<div class="navbar-fixed hexr-background">
+			<div class="navbar-fixed">
 				<nav class="hexr-background">
 					<div class="nav-wrapper hexr-background">
 						<a href="/" class="brand-logo font-anders hide-on-med-and-down active">HexR</a>
@@ -60,15 +66,18 @@
 				</nav>
 			</div>
 		</header>
-		<div id="noscript" class="center valign-wrapper animated bounce">
+		<div id="noscript" class="center valign-wrapper white-text animated bounce">
 			<div class="valign center" id="noscript-wrapper">
 				<h5>Uh-Oh!</h5>
 				<h4>Why no JavaScript?</h4>
 				<h3>This website requires javascript to run!</h3>
-				<h2><a href="http://enable-javascript.com/" target="_blank">Enable JavaScript</a> to find out what HexR is about!</h2>
+				<h2>
+					<a href="http://enable-javascript.com/" {{> blank-target}}>Enable JavaScript</a>
+					to find out what HexR is about!
+				</h2>
 			</div>
 		</div>
-		<main class="white-text grey darken-4">
+		<main>
 			{{{body}}}
 		</main>
 		<footer class="page-footer hexr-background">

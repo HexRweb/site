@@ -38,7 +38,7 @@ async function write(contents = false) {
 		contents = await uglify();
 	}
 
-	return writeFile('./built/assets/css/material-slim.min.css', contents);
+	return writeFile('./src/assets/css/material-slim.min.css', contents);
 }
 
 module.exports = {

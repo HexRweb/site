@@ -66,7 +66,7 @@ async function write(contents = false) {
 		contents = await minify();
 	}
 
-	return writeFile('./built/assets/js/material-slim.min.js', contents);
+	return writeFile('./src/assets/js/material-slim.min.js', contents);
 }
 
 module.exports = {

@@ -5,7 +5,8 @@
   "main": "build.js",
   "scripts": {
     "postinstall": "yarn install --cwd @exstatic",
-    "build": "node ./build.js",
+    "assets": "node ./build.js -build",
+    "build": "node ./scripts/exstatic.js",
     "watch": "node ./@exstatic/packages/cli/bin/exstatic watch"
   },
   "repository": "git@github.com:hexrweb/site",

@@ -1,23 +1,43 @@
-const {copy} = require('fs-extra');
-const exstatic = require('./@exstatic/packages/dev');
-
 const STATIC_FILES = ['favicon.ico', 'robots.txt', 'sitemap.xml', '_redirects'];
-const instance = exstatic();
+const argString = process.argv.join('  ');
+const hasArg = arg => Boolean(new RegExp(`-?-${arg}`).test(argString));
 
-function copyFiles() {
+async function buildAssets() {
+	const {css} = require('./scripts/css');
+	const {js} = require('./scripts/js')
+	console.log('Building assets');
+	return Promise.all([css(), js()]);
+}
+
+async function copyFiles() {
+	const {copy} = require('fs-extra');
+
+	if (hasArg('build')) {
+		await buildAssets();
+	}
+
 	// Exstatic doesn't currently have support for 1:1 copying
-	let promises = [copy('./src/assets', './built/assets')];
+	const promises = [copy('./src/assets', './built/assets')];
 	STATIC_FILES.forEach(file => promises.push(copy(`./src/${file}`, `./built/${file}`)));
+	console.log('Copying assets');
 	return Promise.all(promises);
 }
 
-async function compile() {
-	await instance.build();
+function compile() {
+	const runCompile = require('./scripts/exstatic');
+	return runCompile();
 }
 
 async function run() {
-	await Promise.all([compile(), copyFiles()]);
-	instance.onBeforeExit(true);
+	await copyFiles();
+	return compile();
 }
 
-run();
+if (hasArg('compile')) {
+	compile();
+} else if (hasArg('copy') || hasArg('build')){
+	copyFiles();
+} else {
+	run();
+}
+

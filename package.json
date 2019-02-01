@@ -5,6 +5,7 @@
   "main": "build.js",
   "scripts": {
     "postinstall": "yarn install --cwd @exstatic",
+    "assets": "node ./build.js --build",
     "build": "node ./build.js",
     "watch": "node ./@exstatic/packages/cli/bin/exstatic watch"
   },
@@ -14,6 +15,13 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "fs-extra": "^7.0.1"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "autoprefixer": "^9.4.6",
+    "concat": "^1.0.3",
+    "cssnano": "^4.1.8",
+    "fs-extra": "^7.0.1",
+    "node-sass": "^4.11.0",
+    "terser": "^3.14.1"
   }
 }

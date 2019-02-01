@@ -113,7 +113,9 @@
 	<div id="scripts" class="hide">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<script src="/assets/js/global.js" defer></script>
+		{{#if page.captcha}}
 		<script src="https://www.google.com/recaptcha/api.js" async></script>
+		{{/if}}
 		{{> components/analytics}}
 		{{{block "scripts"}}}
 	</div>

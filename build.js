@@ -4,9 +4,10 @@ const hasArg = arg => Boolean(new RegExp(`-?-${arg}`).test(argString));
 
 async function buildAssets() {
 	const {css} = require('./scripts/css');
+	const overCss = require('./scripts/hexr-styles');
 	const {js} = require('./scripts/js')
 	console.log('Building assets');
-	return Promise.all([css(), js()]);
+	return Promise.all([css(), js(), overCss()]);
 }
 
 async function copyFiles() {

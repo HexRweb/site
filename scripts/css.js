@@ -7,8 +7,8 @@ const cssnano = require('cssnano');
 
 const render = promisify(nodeSass.render);
 
-async function sass() {
-	const absolutePath = path.resolve(__dirname, '../src/sass/materialize.scss');
+async function sass(component = 'materialize') {
+	const absolutePath = path.resolve(__dirname, `../src/sass/${component}.scss`);
 	const result = await render({file: absolutePath});
 
 	return result.css;
@@ -33,12 +33,12 @@ async function uglify(contents = false) {
 	return uglified.css;
 }
 
-async function write(contents = false) {
+async function write(contents = false, file = 'material-slim.min') {
 	if (contents === false) {
 		contents = await uglify();
 	}
 
-	return writeFile('./src/assets/css/material-slim.min.css', contents);
+	return writeFile(`./src/assets/css/${file}.css`, contents);
 }
 
 module.exports = {

@@ -1,0 +1,13 @@
+main {
+	align-items: normal;
+	padding-top: 0
+}
+
+#index-banner {
+	z-index: 5;
+	background-image: url('/assets/img/hero.jpeg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position-y: 50%;
+	height: 150%;
+}

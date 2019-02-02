@@ -15,7 +15,6 @@
 		{{/unless}}
 		<link rel="stylesheet" href="/assets/css/material-slim.min.css" />
 		<link href="/assets/css/global.css" rel="stylesheet">
-		<script src="/assets/js/material-slim.min.js"></script>
 		<style>
 			.hexr-background{/*background-color:#1e5799*/background-color:#12374a !important}
 			.text-hexr-blue{/*color:#1e5799 !important;*/color:#12374a !important}
@@ -111,11 +110,10 @@
 		</footer>
 	</body>
 	<div id="scripts" class="hide">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<script src="/assets/js/global.js" defer></script>
-		{{#if page.captcha}}
-		<script src="https://www.google.com/recaptcha/api.js" async></script>
-		{{/if}}
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<script async src="/assets/js/material-slim.min.js"></script>
+		<script defer src="/assets/js/global.js"></script>
+		{{#if page.captcha}}<script src="https://www.google.com/recaptcha/api.js" async></script>{{/if}}
 		{{> components/analytics}}
 		{{{block "scripts"}}}
 	</div>

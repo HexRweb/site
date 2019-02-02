@@ -1,5 +1,9 @@
 @import 'hexr-components/global';
 
+.page-about {
+	@import 'hexr-components/about';
+}
+
 .page-faq {
 	@import 'hexr-components/faq';
 }

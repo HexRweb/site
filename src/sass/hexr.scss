@@ -1,0 +1,14 @@
+@import 'hexr-components/global';
+
+.page-faq {
+	@import 'hexr-components/faq';
+}
+
+.page-initiative {
+	@import 'hexr-components/initiative';
+}
+
+.page-projects,
+.page-projects-planview {
+	@import 'hexr-components/projects';
+}

@@ -46,6 +46,11 @@ window.addEventListener('load', function () {
 			'g-recaptcha-response': captcha,
 			income: getField('income')
 		};
+		
+		// The server side validation is intentionally rigid; converting this to a float fixes validation rejection
+		if (payload.income === 0) {
+			payload.income = '0.00';
+		}
 
 		submit.innerHTML = 'Submitting...';
 		submit.disabled = true;

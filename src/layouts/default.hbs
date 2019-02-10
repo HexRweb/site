@@ -20,6 +20,7 @@
 			.text-hexr-blue{/*color:#1e5799 !important;*/color:#12374a !important}
 			nav.hexr-background{padding:0 23px}
 			.noscript{display: none}
+			.nav-the-book.flow-text{font-size:1rem !important}
 		</style>
 		<noscript><style>.needsjs{display: none}.noscript{display: inline-block; display: inherit}</style></noscript>
 		{{{block "head"}}}
@@ -33,28 +34,17 @@
 						<a href="/" class="brand-logo font-anders center hide-on-large-only active">HexR</a>
 						<span class="noscript center red-text hide-on-large-only sidenav-trigger">Nav needs javascript</span>
 						<a href="#" data-target="mobile" class="needsjs sidenav-trigger"><i class="material-icons">menu</i></a>
-						<!-- @todo: Active page -->
 						<ul class="right hide-on-med-and-down">
-							<li><a class="flow-text" href="/about">About</a></li>
-							<li><a class="flow-text" href="/initiative">Initiative</a></li>
-							<li><a class="flow-text" href="/projects">Projects</a></li>
-							<li><a class="flow-text" href="/pricing">Pricing</a></li>
-							<li><a class="flow-text" href="/faq">FAQ</a></li>
+							{{#navigation}}
+								<li><a href="{{href}}" class="flow-text nav-{{slug}} {{#if current}}active{{/if}}">{{title}}</a></li>
+							{{/navigation}}
 							{{!-- <li><a class="flow-text" href="/clients">Clients</a></li> --}}
-							<li><a class="flow-text" href="/sponsors">Sponsors</a></li>
-							<li><a class="flow-text" href="/contact">Contact</a></li>
-							<li><a class="center" href="/the-book">The Book</a></li>
 						</ul>
 						<ul class="sidenav page-background white-text hexr-center" id="mobile">
-							<li><a class="center waves-effect" href="/about">About</a></li>
-							<li><a class="center waves-effect" href="/initiative">Initiative</a></li>
-							<li><a class="center waves-effect" href="/projects">Projects</a></li>
-							<li><a class="center waves-effect" href="/pricing">Pricing</a></li>
-							<li><a class="center waves-effect" href="/faq">FAQ</a></li>
+							{{#navigation}}
+								<li><a href="{{href}}" class="center waves-effect nav-{{slug}}">{{title}}</a></li>
+							{{/navigation}}
 							{{!-- <li><a class="center waves-effect" href="/clients">Clients</a></li> --}}
-							<li><a class="center waves-effect" href="/the-book">The Book</a></li>
-							<li><a class="center waves-effect" href="/sponsors">Sponsors</a></li>
-							<li><a class="center waves-effect" href="/contact">Contact</a></li>
 						</ul>
 					</div>
 				</nav>

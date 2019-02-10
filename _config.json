@@ -4,6 +4,16 @@
     "layoutsDir": "./src/layouts",
     "partialsDir": "./src/partials",
     "site": {
+      "navigation": [
+        {"title": "About", "href": "/about"},
+        {"title": "Initiative", "href": "/initiative"},
+        {"title": "Projects", "href": "/projects"},
+        {"title": "Pricing", "href": "/pricing"},
+        {"title": "FAQ", "href": "/faq"},
+        {"title": "Sponsors", "href": "/sponsors"},
+        {"title": "Contact", "href": "/contact"},
+        {"title": "The Book", "href": "/the-book"}
+      ],
       "url": "https://www.hexr.org",
       "recaptcha_key": "6LfvI4kUAAAAAIxSk9gvDtqtnB-eytl1PZmM6CEf"
     }

@@ -1,0 +1,81 @@
+<div id="request" class="modal">
+	<div class="modal-content row black-text">
+		<h4>Request a website!</h4>
+		<p>Your IP address will be logged to prevent abuse</p>
+		<p class="red-text">* denotes required field.</p>
+		<div class="error-list red-text"></div>
+		<form id="request-site" class="col s12">
+			<div class="row">
+				<div class="input-field col m6"><i class="material-icons prefix">contacts</i>
+					<input id="first_name" name="first_name" type="text" class="validate" required />
+					<label for="first_name">First Name <a class="red-text">*</a></label>
+				</div>
+				<div class="input-field col m6"><i class="material-icons prefix">contacts</i>
+					<input id="last_name" name="last_name" type="text" class="validate" required />
+					<label for="last_name">Last Name <a class="red-text">*</a></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col m6"><i class="material-icons prefix">email</i>
+					<input id="email" name="email" type="email" class="validate" required />
+					<label for="email">Email Address <a class="red-text">*</a></label>
+				</div>
+				<div class="input-field col m6"><i class="material-icons prefix">phone</i>
+					<input id="phone" name="phone" type="tel" class="validate" required />
+					<label for="phone">Phone Number <a class="red-text">*</a></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12"><i class="material-icons prefix">subtitles</i>
+					<input id="organization" name="organization" type="text" class="validate" required />
+					<label for="organization">Organization Name <a class="red-text">*</a></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12"><i class="material-icons prefix">web</i>
+					<input id="website" name="website" type="url" />
+					<label for="website">Organization Website (optional)</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12"><i class="material-icons prefix">message</i>
+					<textarea id="org-desc" name="org-desc" class="materialize-textarea" required></textarea>
+					<label for="org-desc">Briefly describe your organization <a class="red-text">*</a></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12"><i class="material-icons prefix">view_list</i>
+					<textarea id="org-web-requirements" name="org-web-requirements" class="materialize-textarea" required></textarea>
+					<label for="org-web-requirements">Briefly describe what you need in your website <a class="red-text">*</a></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s4"><i class="material-icons prefix">assignment_ind</i>
+					<input type="number" id="num-employees" name="num-employees" class="validate" required />
+					<label for="num-employees">Employees<a class="red-text">*</a></label>
+				</div>
+				<div class="input-field col m4"><i class="material-icons prefix">$</i>
+					<input type="number" id="income" name="income" class="validate" required />
+					<label for="income">Income <a class="red-text">*</a></label>
+				</div>
+				<div class="input-field col m4">
+					<div class="switch">
+						<label>For profit
+							<input type="checkbox" id="profit" name="profit" class="validate">
+							<span class="lever"></span>
+							Non profit</label>
+					</div>
+				</div>
+			</div>
+			<div class="row center">
+				<div class="input-field col s12 offset-m4">
+					<div class="g-recaptcha" data-sitekey="{{@site.recaptcha_key}}"></div>
+				</div>
+				<button type="submit" class="btn btn-large green darken-4 waves-effect waves-effect-light">Submit</button>
+			</div>
+		</form>
+	</div>
+</div>
+{{#contentFor "scripts"}}
+<script src="/assets/js/submit-request.js"></script>
+{{/contentFor}}

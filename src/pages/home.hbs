@@ -5,6 +5,9 @@ captcha: true
 meta:
   home: true
 ---
+{{#contentFor "head"}}
+<style>.noscript.hide{display: initial !important}</style>
+{{/contentFor}}
 <div id="index-banner" class="transparent">
 	<div class="section no-pad-bot">
 		<div class="container">
@@ -92,7 +95,7 @@ meta:
 <div class="section center white-text valign" id="contact">
 	<div class="valign">
 		<p class="flow-text">So what are you waiting for?</p>
-			<a class="no-script btn flow-text waves-effect waves-light hexr-background" href="/request/email">
+			<a class="noscript btn flow-text waves-effect waves-light hexr-background" href="/request/email">
 				GET YOUR WEBSITE NOW!
 			</a>
 			<a class="modal-trigger btn flow-text waves-effect waves-light hexr-background" href="#request">
@@ -105,9 +108,9 @@ meta:
 {{> components/request-form}}
 {{#contentFor "scripts"}}
 <link rel="stylesheet" href="/assets/css/animations.home.css" />
-<script>
-	//$(".parallax").parallax();
-/*var o = [{
+{{!-- <script>
+$(".parallax").parallax();
+var o = [{
 		selector: '#benefit-1',
 		offset: 200,
 		callback: '$("#benefit-1").children().addClass("animated slideInRight").removeClass("hide");'
@@ -137,6 +140,6 @@ meta:
 		callback: '$("#contact").children().addClass("animated rotateIn").delay(1000).removeClass("rotateIn").addClass("flash")'
 	}, ];
 	if ($(window).width() >= 922) M.ScrollSpy(o);
-	else*/ document.querySelectorAll('.section .row').forEach(el => el.classList.remove('hide'));// .addClass('center');
-</script>
+	else document.querySelectorAll('.section .row').forEach(el => el.classList.remove('hide'));
+</script> --}}
 {{/contentFor}}

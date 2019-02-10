@@ -5,6 +5,9 @@ captcha: true
 meta:
   home: true
 ---
+{{#contentFor "head"}}
+<style>.noscript.hide{display: initial !important}</style>
+{{/contentFor}}
 <div id="index-banner" class="transparent">
 	<div class="section no-pad-bot">
 		<div class="container">
@@ -33,7 +36,7 @@ meta:
 	</div>
 </div>
 <div class="section section-1 z-depth-5 valign-wrapper" id="benefit-1">
-	<div class="row container hide valign">
+	<div class="row container hide noscript valign">
 		<div class="col s12 m5 l5 benefit-icon"><i class="material-icons large">code</i></div>
 		<div class="col s12 m7 l7 right-align">
 			<h3>Beautifully Coded</h3>
@@ -42,7 +45,7 @@ meta:
 	</div>
 </div>
 <div class="section section-2 z-depth-4 valign-wrapper" id="benefit-2">
-	<div class="row container hide valign">
+	<div class="row container hide noscript valign">
 		<div class="col s12 m7 l7">
 			<h3>Scalable</h3>
 			<span class="flow-text">HexR websites go through a big evaluation before being available for you. This includes responsive design and robust backend. Every website will work everywhere and can support any amount of content.</span>
@@ -51,7 +54,7 @@ meta:
 	</div>
 </div>
 <div class="section section-3 z-depth-3 valign-wrapper opposite" id="benefit-3">
-	<div class="row container hide valign">
+	<div class="row container hide noscript valign">
 		<div class="col s12 m5 l5 benefit-icon"><i class="material-icons large">$$$</i></div>
 		<div class="col s12 m7 l7 right-align">
 			<h3>Inexpensive</h3>
@@ -60,7 +63,7 @@ meta:
 	</div>
 </div>
 <div class="section section-1 z-depth-2 valign-wrapper opposite" id="benefit-4">
-	<div class="row container hide valign">
+	<div class="row container hide noscript valign">
 		<div class="col s12 m7 l7">
 			<h3>Manageable</h3>
 			<span class="flow-text">We get all the emails so you don't have to. All of the background stuff is managed by us so you can focus on the content that matters most to you.</span>
@@ -69,7 +72,7 @@ meta:
 	</div>
 </div>
 <div class="section section-2 z-depth-1 valign-wrapper opposite" id="benefit-5">
-	<div class="row container hide valign">
+	<div class="row container hide noscript valign">
 		<div class="col s12 m5 l5 benefit-icon"><i class="material-icons large">lock</i></div>
 		<div class="col s12 m7 l7">
 			<h3 class="right-align">Secure</h3>
@@ -81,7 +84,7 @@ meta:
 	</div>
 </div>
 <div class="section section-3 valign-wrapper" id="benefit-6" data-animate="jello">
-	<div class="row container hide valign">
+	<div class="row container hide noscript valign">
 		<div class="col s12 m7 l7">
 			<h3>Support</h3>
 			<span class="flow-text">However you want your website and whatever you need, HexR will work to make it happen. From the computer fearing individual to the tech savvy engineer, we're ready to work with you, all the way through.</span>
@@ -92,7 +95,10 @@ meta:
 <div class="section center white-text valign" id="contact">
 	<div class="valign">
 		<p class="flow-text">So what are you waiting for?</p>
-			<a class="modal-trigger btn flow-text waves-effect waves-light hexr-background" href="#request">
+			<a class="noscript btn flow-text waves-effect waves-light hexr-background" href="/request/email">
+				GET YOUR WEBSITE NOW!
+			</a>
+			<a class="modal-trigger needsjs btn flow-text waves-effect waves-light hexr-background" href="#request">
 				GET YOUR WEBSITE NOW!
 			</a>
 		<br/>
@@ -102,9 +108,9 @@ meta:
 {{> components/request-form}}
 {{#contentFor "scripts"}}
 <link rel="stylesheet" href="/assets/css/animations.home.css" />
-<script>
-	//$(".parallax").parallax();
-/*var o = [{
+{{!-- <script>
+$(".parallax").parallax();
+var o = [{
 		selector: '#benefit-1',
 		offset: 200,
 		callback: '$("#benefit-1").children().addClass("animated slideInRight").removeClass("hide");'
@@ -134,6 +140,6 @@ meta:
 		callback: '$("#contact").children().addClass("animated rotateIn").delay(1000).removeClass("rotateIn").addClass("flash")'
 	}, ];
 	if ($(window).width() >= 922) M.ScrollSpy(o);
-	else*/ document.querySelectorAll('.section .row').forEach(el => el.classList.remove('hide'));// .addClass('center');
-</script>
+	else document.querySelectorAll('.section .row').forEach(el => el.classList.remove('hide'));
+</script> --}}
 {{/contentFor}}

@@ -1,4 +1,4 @@
-const STATIC_FILES = ['favicon.ico', 'robots.txt', 'sitemap.xml', '_redirects'];
+const STATIC_FILES = ['favicon.ico', 'robots.txt', '_redirects'];
 const argString = process.argv.join('  ');
 const hasArg = arg => Boolean(new RegExp(`-?-${arg}`).test(argString));
 

@@ -16,4 +16,7 @@ module.exports = buildHexrStyles;
 
 if (!module.parent) {
 	buildHexrStyles();
+	if (process.argv.join(' ').indexOf('copy') >= 0) {
+		require('fs').copyFileSync('./src/assets/css/global.css', './built/assets/css/global.css');
+	}
 }

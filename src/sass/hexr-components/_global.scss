@@ -61,54 +61,36 @@ footer {
 .background-1,
 .section-1 {
 	background-color: #4889F4 !important;
-	background: -webkit-linear-gradient(75deg, #4889F4, blue);
-	background: -o-linear-gradient(75deg, #4889F4, blue);
-	background: -moz-linear-gradient(75deg, #4889F4, blue);
-	background: linear-gradient(75deg, #4889F4, blue);
+	background: linear-gradient(285deg, #4889F4, blue);
 }
 
 .background-2,
 .section-2 {
-	background-color: #dd9f4d !important;
-	background: -webkit-linear-gradient(75deg, #dd9f4d, #DEB887);
-	background: -o-linear-gradient(75deg, #dd9f4d, #DEB887);
-	background: -moz-linear-gradient(75deg, #dd9f4d, #DEB887);
-	background: linear-gradient(75deg, #dd9f4d, #DEB887);
+	background-color: #DEB887 !important;
+	background: linear-gradient(285deg, #DEB887, #dd9f4d);
 }
 
 .background-3,
 .section-3 {
-	background-color: #42a92c !important;
-	background: -webkit-linear-gradient(75deg, #006400, #42a92c);
-	background: -o-linear-gradient(75deg, #006400, #42a92c);
-	background: -moz-linear-gradient(75deg, #006400, #42a92c);
-	background: linear-gradient(75deg, #006400, #42a92c);
+	background-color: #006400 !important;
+	background: linear-gradient(285deg, #42a92c, #006400);
 }
 
 .background-1.opposite,
 .section-1.opposite {
 	background-color: #4889F4 !important;
-	background: -webkit-linear-gradient(75deg, blue, #4889F4);
-	background: -o-linear-gradient(75deg, blue, #4889F4);
-	background: -moz-linear-gradient(75deg, blue, #4889F4);
-	background: linear-gradient(75deg, blue, #4889F4);
+	background: linear-gradient(75deg, #4889F4, blue);
 }
 
 .background-2.opposite,
 .section-2.opposite {
 	background-color: #dd9f4d !important;
-	background: -webkit-linear-gradient(75deg, #DEB887, #dd9f4d);
-	background: -o-linear-gradient(75deg, #DEB887, #dd9f4d);
-	background: -moz-linear-gradient(75deg, #DEB887, #dd9f4d);
 	background: linear-gradient(75deg, #DEB887, #dd9f4d);
 }
 
 .background-3.opposite,
 .section-3.opposite {
 	background-color: #42a92c !important;
-	background: -webkit-linear-gradient(75deg, #42a92c, #006400);
-	background: -o-linear-gradient(75deg, #42a92c, #006400);
-	background: -moz-linear-gradient(75deg, #42a92c, #006400);
 	background: linear-gradient(75deg, #42a92c, #006400);
 }
 

@@ -40,15 +40,9 @@ footer {
 	}
 }
 
-.section.section-1,
-.section.section-2,
-.section.section-3 {
+.section {
 	min-height: 300px;
 	color: white;
-}
-
-.section .benefit-icon {
-	margin-top: 75px !important;
 }
 
 @media only screen and (max-width: 601px) {
@@ -178,3 +172,11 @@ tr {
 	width: 100%;
 }
 /* End styles for contact message box */
+
+.flex {
+	display: flex;
+
+	&.inline {
+		flex-direction: column;
+	}
+}

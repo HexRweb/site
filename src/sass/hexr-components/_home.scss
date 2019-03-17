@@ -18,3 +18,54 @@ main {
 	margin-top: 5rem;
 	padding: 1rem 0;
 }
+
+/* feature item styles */
+.section .flex {
+	align-items: center;
+	justify-content: space-between;
+
+	.benefit-icon {
+		flex: 5;
+	}
+	.benefit-description {
+		flex: 7;
+	}
+}
+.opposite h3,
+.benefit-icon {
+	text-align: right;
+}
+
+.benefit-description,
+.opposite .benefit-icon {
+	text-align: left;
+}
+
+@media (max-width: 675px) {
+	.section .flex {
+		flex-direction: column-reverse;
+		justify-content: center;
+		padding-bottom: 3rem;
+  }
+
+	.opposite .flex {
+		flex-direction: column;
+	}
+
+	.opposite h3, .opposite .benefit-icon,
+	.benefit-description, .benefit-icon {
+		text-align: center;
+	}
+}
+
+#contact {
+  .flow-text {
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  min-height: auto;
+  margin: 2em auto;
+}
+
+/* end feature item styles */

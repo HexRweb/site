@@ -29,26 +29,33 @@ body,
 	background-color: #12607D !important;
 }
 
-footer {
-	position: relative;
-	bottom: 0;
+.page-footer {
+  .footer-left {
+    flex: 6;
+    padding-top: 3rem;
+  }
 
+  .footer-right {
+    flex: 4;
+    margin-top: 3rem;
 
-	&.page-footer {
-		margin-top: 0;
-		padding-top: 0;
-	}
+    @media (min-width: 1000px) {
+      padding-left: 10em;
+    }
+  }
+
+  @media (min-width: 700px) {
+    padding-top: 0;
+
+    .flex {
+      flex-direction: row;
+    }
+  }
 }
 
-.section.section-1,
-.section.section-2,
-.section.section-3 {
+.section {
 	min-height: 300px;
 	color: white;
-}
-
-.section .benefit-icon {
-	margin-top: 75px !important;
 }
 
 @media only screen and (max-width: 601px) {
@@ -61,54 +68,36 @@ footer {
 .background-1,
 .section-1 {
 	background-color: #4889F4 !important;
-	background: -webkit-linear-gradient(75deg, #4889F4, blue);
-	background: -o-linear-gradient(75deg, #4889F4, blue);
-	background: -moz-linear-gradient(75deg, #4889F4, blue);
-	background: linear-gradient(75deg, #4889F4, blue);
+	background: linear-gradient(285deg, #4889F4, blue);
 }
 
 .background-2,
 .section-2 {
-	background-color: #dd9f4d !important;
-	background: -webkit-linear-gradient(75deg, #dd9f4d, #DEB887);
-	background: -o-linear-gradient(75deg, #dd9f4d, #DEB887);
-	background: -moz-linear-gradient(75deg, #dd9f4d, #DEB887);
-	background: linear-gradient(75deg, #dd9f4d, #DEB887);
+	background-color: #DEB887 !important;
+	background: linear-gradient(285deg, #DEB887, #dd9f4d);
 }
 
 .background-3,
 .section-3 {
-	background-color: #42a92c !important;
-	background: -webkit-linear-gradient(75deg, #006400, #42a92c);
-	background: -o-linear-gradient(75deg, #006400, #42a92c);
-	background: -moz-linear-gradient(75deg, #006400, #42a92c);
-	background: linear-gradient(75deg, #006400, #42a92c);
+	background-color: #006400 !important;
+	background: linear-gradient(285deg, #42a92c, #006400);
 }
 
 .background-1.opposite,
 .section-1.opposite {
 	background-color: #4889F4 !important;
-	background: -webkit-linear-gradient(75deg, blue, #4889F4);
-	background: -o-linear-gradient(75deg, blue, #4889F4);
-	background: -moz-linear-gradient(75deg, blue, #4889F4);
-	background: linear-gradient(75deg, blue, #4889F4);
+	background: linear-gradient(75deg, #4889F4, blue);
 }
 
 .background-2.opposite,
 .section-2.opposite {
 	background-color: #dd9f4d !important;
-	background: -webkit-linear-gradient(75deg, #DEB887, #dd9f4d);
-	background: -o-linear-gradient(75deg, #DEB887, #dd9f4d);
-	background: -moz-linear-gradient(75deg, #DEB887, #dd9f4d);
 	background: linear-gradient(75deg, #DEB887, #dd9f4d);
 }
 
 .background-3.opposite,
 .section-3.opposite {
 	background-color: #42a92c !important;
-	background: -webkit-linear-gradient(75deg, #42a92c, #006400);
-	background: -o-linear-gradient(75deg, #42a92c, #006400);
-	background: -moz-linear-gradient(75deg, #42a92c, #006400);
 	background: linear-gradient(75deg, #42a92c, #006400);
 }
 
@@ -122,6 +111,8 @@ footer {
 
 #subtitle {
 	font-weight: 800;
+	margin-top: 0;
+	margin-bottom: 1em;
 }
 
 .footer-link {
@@ -196,3 +187,23 @@ tr {
 	width: 100%;
 }
 /* End styles for contact message box */
+
+.flex {
+	display: flex;
+
+	&.inline {
+		flex-direction: column;
+  }
+
+  .half {
+		flex: 3;
+	}
+
+	.full {
+		flex: 6;
+	}
+
+	.third {
+		flex: 2;
+	}
+}

@@ -20,7 +20,7 @@ main {
 }
 
 /* feature item styles */
-.flex {
+.section .flex {
 	align-items: center;
 	justify-content: space-between;
 
@@ -42,11 +42,12 @@ main {
 }
 
 @media (max-width: 675px) {
-	.flex {
+	.section .flex {
 		flex-direction: column-reverse;
 		justify-content: center;
 		padding-bottom: 3rem;
-	}
+  }
+
 	.opposite .flex {
 		flex-direction: column;
 	}

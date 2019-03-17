@@ -29,15 +29,28 @@ body,
 	background-color: #12607D !important;
 }
 
-footer {
-	position: relative;
-	bottom: 0;
+.page-footer {
+  .footer-left {
+    flex: 6;
+    padding-top: 3rem;
+  }
 
+  .footer-right {
+    flex: 4;
+    margin-top: 3rem;
 
-	&.page-footer {
-		margin-top: 0;
-		padding-top: 0;
-	}
+    @media (min-width: 1000px) {
+      padding-left: 10em;
+    }
+  }
+
+  @media (min-width: 700px) {
+    padding-top: 0;
+
+    .flex {
+      flex-direction: row;
+    }
+  }
 }
 
 .section {

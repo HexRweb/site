@@ -193,5 +193,17 @@ tr {
 
 	&.inline {
 		flex-direction: column;
+  }
+
+  .half {
+		flex: 3;
+	}
+
+	.full {
+		flex: 6;
+	}
+
+	.third {
+		flex: 2;
 	}
 }

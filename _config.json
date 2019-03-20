@@ -3,6 +3,7 @@
     "outputDir": "./built",
     "layoutsDir": "./src/layouts",
     "partialsDir": "./src/partials",
+    "watch": "./src/sass",
     "site": {
       "navigation": [
         {"title": "About", "href": "/about"},
@@ -16,6 +17,5 @@
       ],
       "url": "https://www.hexr.org",
       "recaptcha_key": "6LfvI4kUAAAAAIxSk9gvDtqtnB-eytl1PZmM6CEf"
-    },
-    "watch": "{input}/../sass"
+    }
 }

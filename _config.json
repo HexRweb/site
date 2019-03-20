@@ -17,6 +17,5 @@
       "url": "https://www.hexr.org",
       "recaptcha_key": "6LfvI4kUAAAAAIxSk9gvDtqtnB-eytl1PZmM6CEf"
     },
-    "watch": "{input}/../sass",
-    "on-init": "./exstatic-initialized.js"
+    "watch": "{input}/../sass"
 }

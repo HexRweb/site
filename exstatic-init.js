@@ -1,4 +1,6 @@
 const path = require('path');
+const readline = require('readline');
+const {performance} = require('perf_hooks');
 
 const sassPath = path.resolve(__dirname, './src/sass');
 const isSassPath = absPath => absPath.indexOf(sassPath) >= 0;
@@ -14,13 +16,16 @@ const pipeline = (material) => {
 	return buildOverride();
 }
 
+const elapsedTime = startTime => ((performance.now() - startTime) / 1000).toFixed(3);
+
 function onFileEvent({modification, absolutePath}) {
 	const file = absolutePath.replace(/\//g, path.sep);
 	if (isSassPath(file)) {
 		const isMat = isMaterialPath(file);
+		const start = performance.now();
 		return pipeline(isMat).then(() => {
 			const fileText = isMat ? 'materialize' : 'global';
-			console.log(`Rebuilt ${fileText} styles because ${path.relative(sassPath, file)} was ${modification}`);
+			console.log(`Rebuilt ${fileText} styles because ${path.relative(sassPath, file)} was ${modification} in ${elapsedTime(start)}s`);
 		}).catch(error => {
 			console.warn('Failed to rebuild css', error);
 		});
@@ -36,7 +41,10 @@ module.exports = (instance) => {
 	instance.events.on('file_modified', onFileEvent);
 
 	console.log('Building css');
+	const start = performance.now();
 	return buildOverride().then(() => {
-		console.log('...done');
+		readline.moveCursor(process.stdout, 0, -1);
+		readline.clearLine(process.stdout, 0);
+		console.log(`Building css...done [${elapsedTime(start)}s]`);
 	});
 };

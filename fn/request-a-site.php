@@ -121,19 +121,21 @@ function getCleanData() : Array {
  * @name: sendEmail
  * @description: uses the MailGun API to send an email based on $fields
  * @param: $fields - a list of fields to be sent to the API, documented here:
- *       https://documentation.mailgun.com/en/latest/api-sending.html#sending
+ *       https://sendgrid.com/docs/API_Reference/Web_API_v3/Mail/index.html
  * @returns: response from API and status Code
 */
 function sendEmail(Array &$fields) : Array {
 	global $config;
 	$instance = curl_init();
 	curl_setopt_array($instance, array(
-		CURLOPT_URL => 'https://api.mailgun.net/v3/robots.hexr.org/messages',
-		CURLOPT_USERPWD => 'api:'.$config['mailgun_key'],
+		CURLOPT_URL => 'https://api.sendgrid.com/v3/mail/send',
+		CURLOPT_HTTPHEADER => array(
+			'authorization: Bearer '.$config['sendgrid_key'],
+			'content-type: application/json'
+		),
 		CURLOPT_CUSTOMREQUEST => 'POST',
-		CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
 		CURLOPT_RETURNTRANSFER => 1,
-		CURLOPT_POSTFIELDS => $fields
+		CURLOPT_POSTFIELDS => json_encode($fields),
 	));
 	$data = curl_exec($instance);
 	$code = curl_getinfo($instance, CURLINFO_HTTP_CODE);
@@ -206,20 +208,43 @@ Here's the information we received:
 $body = str_replace("\n", "<br/>\n", $body);
 $emailAddress = $data['emailAddress'];
 $emailFields = array(
-	'subject' => 'Thanks for Requesting a website!',
-	'from' => 'HexR Request Robot <request@robots.hexr.org>',
-	'to' => $data['firstName']. ' '. $data['lastName'] . "<$emailAddress>",
-	'cc' => "HexR Request Management <request@hexr.org>",
-	'h:reply-to' => 'HexR Request Management <request@hexr.org>',
-	'html' => $body,
-	'text' => strip_tags($body)
+	'personalizations' => [array(
+		'to' => [array(
+			'email' => $emailAddress,
+			'name' => $data['firstName']. ' '. $data['lastName']
+		)],
+		'cc' => [array(
+			'email' => 'request@hexr.org',
+			'name' => 'HexR Request Management'
+		)],
+		'subject' => 'Thanks for Requesting a website!',
+	)],
+	'from' => array(
+		'email' => 'request@robots.hexr.org',
+		'name' => 'HexR Request Robot'
+	),
+	'reply_to' => array(
+		'email' => 'request@hexr.org',
+		'name' => 'HexR Request Management'
+	),
+	'content' => [
+		array(
+			'type' => 'text/plain',
+			'value' => strip_tags($body)
+		),
+		array(
+			'type' => 'text/html',
+			'value' => $body
+		)
+	]
 );
 
 $sentEmailResponse = sendEmail($emailFields);
 
-if ($sentEmailResponse['code'] !== 200) {
+if ($sentEmailResponse['code'] !== 202) {
 	die('{"errors":["Message failed to send. Please contact us so we can manually create the request."], "code": "E_NOT_200"}');
 }
 
 die('{"errors":[]}');
+
 ?>

@@ -1,13 +1,12 @@
 const COMPONENT_NAME = 'hexr';
 const OUTPUT_NAME = 'global';
-const {sass, prefix, uglify, write} = require('./css.js');
+const {sass, postcss, write} = require('./css.js');
 
 async function buildHexrStyles() {
 	let pipeline = '';
 
 	pipeline = await sass(COMPONENT_NAME);
-	pipeline = await prefix(pipeline);
-	pipeline = await uglify(pipeline);
+	pipeline = await postcss(pipeline);
 
 	return write(pipeline, OUTPUT_NAME);
 }

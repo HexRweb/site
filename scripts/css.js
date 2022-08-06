@@ -1,5 +1,6 @@
 const {promisify} = require('util');
 const path = require('path');
+const postcss_ = require('postcss');
 const autoprefixer = require('autoprefixer');
 const {writeFile} = require('fs-extra');
 const nodeSass = require('node-sass');
@@ -14,23 +15,14 @@ async function sass(component = 'materialize') {
 	return result.css;
 }
 
-async function prefix(contents = false) {
+async function postcss(contents = false) {
 	if (contents === false) {
 		contents = await sass();
 	}
 
-	const prefixed = await autoprefixer.process(contents, {from: undefined});
+	const prefixed = await postcss_([autoprefixer, cssnano]).process(contents, {from: undefined});
 
 	return prefixed.css;
-}
-
-async function uglify(contents = false) {
-	if (contents === false) {
-		contents = await prefix();
-	}
-
-	const uglified = await cssnano.process(contents, {from: undefined});
-	return uglified.css;
 }
 
 async function write(contents = false, file = 'material-slim.min') {
@@ -44,8 +36,7 @@ async function write(contents = false, file = 'material-slim.min') {
 module.exports = {
 	css: write,
 	sass,
-	prefix,
-	uglify,
+	postcss,
 	write
 };
 

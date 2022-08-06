@@ -10,6 +10,9 @@
     "watch": "node ./@exstatic/packages/cli/bin/exstatic watch",
     "exstatic": "node ./@exstatic/packages/cli/bin/exstatic"
   },
+  "engines": {
+    "node": "^12"
+  },
   "repository": "git@github.com:hexrweb/site",
   "author": "HexR <hello@hexr.org>",
   "license": "MIT",
